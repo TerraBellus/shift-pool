@@ -1,5 +1,5 @@
-# Lisk pool distribution software
-This software is created by lisk delegate "dakk", please consider a small donation if you
+# Shift pool distribution software
+This software was forked from a version created by "dakk", please consider a small donation to him if you
 use this software: 
 - "2324852447570841050L" for lisk
 - "7725849364280821971S" for shift
@@ -35,16 +35,6 @@ If you want to run a private pool, you need to edit config.json and:
 
 - private: set to true
 - whitelist: put a list of address you wish to include
-
-### Ark & Kapu
-If you are using this software on ark, you should edit pollogs_example_ark.json and put:
-
-- lastpayout: the unixtimestamp of your last payout or the date of pool starting 
-- lastforged: the forged amount recorded in your last payout or the forged amount of pool starting
-
-then move poollogs_example_ark.json to poollogs.json.
-
-Also, replace docs/index.html with docs/index.ark.html
 
 ## Running it
 
@@ -84,7 +74,6 @@ poollogs.json to docs/poollogs.json and send the update to your git repo.
 
 To display the pool frontend, enable docs-site on github repository settings.
 
-
 ## Batch mode
 
 The script is also runnable by cron using the -y argument:
@@ -93,7 +82,6 @@ The script is also runnable by cron using the -y argument:
 
 There is also a 'batch.sh' file which run liskpool, then payments.sh and copy the poollogs.json
 in the docs folder.
-
 
 ### Avoid vote hoppers
 
@@ -118,26 +106,6 @@ optional arguments:
   --min-payout MINPAYOUT
                         override the minpayout value from config file
 ```
-
-## Lisk and Rise migration for version 1.0
-
-Since Lisk version 1.0.0 and Rise version 1.0, APIs with secret used for creating 
-transaction are not available anymore, so we need to use the dpos-api-fallback
-(a special thanks for vekexasia who made this tool). 
-
-First, update the lisk-pool source, update the config.json with new fields, then install dpos-api-fallback inside the lisk-pool
-directory:
-
-```bash
-cd lisk-pool
-git clone https://github.com/vekexasia/dpos-api-fallback
-cd dpos-api-fallback
-npm install
-npm run package
-```
-
-**nodejs >= 6 is mandatory for running dpos-api-fallback!**
-
 
 ## License
 Copyright 2017-2018 Davide Gessa
