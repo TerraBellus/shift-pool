@@ -1,7 +1,7 @@
 {
 	"coin": "SHIFT",
-	"node": "http://localhost:8000",
-	"nodepay": "http://localhost:8000",
+	"node": "http://localhost:9305",
+	"nodepay": "http://localhost:9305",
 	"pubkey": "6e8c612568acafbcfff621a63cfb85d55b61e61ffe5c617c419770bbb289d614",
 	"address": "3674359349783883746S",
 	"percentage": 40,
@@ -11,6 +11,7 @@
 	"secondsecret": "SECRET2",
 	"feededuct": false,
     "donations": {
+		"14828780214380070211S": 20
     },
     "donationspercentage": {
 	},
